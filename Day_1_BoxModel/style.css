@@ -1,0 +1,83 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+  background-color: lightgray;
+  border: 1px solid black;
+}
+.block-card{
+  background-color: lightcyan;
+  border: 1px solid palevioletred;
+  padding: 10px;
+  display: block;
+}
+.inline-card{
+  background-color: lightsalmon;
+  border: 1px solid aqua;
+  display: inline;
+  padding: 20px;
+  width: 70px;
+  height: 100px;
+
+  /* 
+  Brauzer nə edir? (reallıq)
+
+Brauzer DOM-u pozmur, amma layout zamanı belə davranır:
+
+h2 və p → block elementdir
+
+block element öz sətirini tələb edir
+
+inline parent isə sətir qıra bilmir
+
+➡️ Nəticədə:
+
+inline-card üçün hesablanan ölçü = 0
+
+background çəkilmir
+
+border ya görünmür, ya da 1px xətt kimi qalır
+
+Yəni:
+
+background yoxdur ÇÜNKİ doldurulacaq sahə yoxdur
+  */
+
+
+
+  /* 
+  inline-card → inline formatting context
+
+h2, p → block-level element
+
+Block element:
+
+öz sətirini istəyir
+
+inline parent-in line-box-ına daxil ola bilmir
+
+Nəticə:
+
+parent inline element real inline box yarada bilmir
+
+background haraya çəkilsin?
+
+📌 Brauzer yalnız text-level inline box-lara background çəkir
+📌 Burada isə inline parent-in daxilində text-level content yoxdur
+  */
+}
+.inline-block-card{
+  padding: 50px;
+  background-color: lightgreen;
+  border: 1px solid orange;
+  display: inline-block;
+}
+
+
