@@ -15,17 +15,21 @@
 .block-card{
   background-color: lightcyan;
   border: 1px solid palevioletred;
-  padding: 10px;
+  /* padding: 20px; */
   display: block;
 }
 .inline-card{
   background-color: lightsalmon;
   border: 1px solid aqua;
-  display: inline;
-  padding: 20px;
-  width: 70px;
-  height: 100px;
-
+  display: inline-block;
+  padding: 10px;
+}
+  .inline-block-card{
+    padding: 50px;
+    background-color: lightgreen;
+    border: 1px solid orange;
+    display: inline-block;
+  }
   /* 
   Brauzer nə edir? (reallıq)
 
@@ -72,12 +76,5 @@ background haraya çəkilsin?
 📌 Brauzer yalnız text-level inline box-lara background çəkir
 📌 Burada isə inline parent-in daxilində text-level content yoxdur
   */
-}
-.inline-block-card{
-  padding: 50px;
-  background-color: lightgreen;
-  border: 1px solid orange;
-  display: inline-block;
-}
 
 
